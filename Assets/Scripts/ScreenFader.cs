@@ -6,6 +6,10 @@ public class ScreenFader : MonoBehaviour
 {
     public Image fadeImage;
 
+       void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     public void FadeButtonClick()
     {
         StartCoroutine(FadeInOut(1f, 2f));
@@ -23,7 +27,8 @@ public class ScreenFader : MonoBehaviour
     // Fade to black  
     yield return StartCoroutine(FadeIn(fadeDuration));  
     // Now load the scene  
-    UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);  
+    UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName); 
+     yield return StartCoroutine(FadeOut(fadeDuration));
 }  
     
    
