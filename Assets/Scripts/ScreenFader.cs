@@ -9,6 +9,11 @@ public class ScreenFader : MonoBehaviour
        void Awake()
     {
         DontDestroyOnLoad(gameObject);
+
+         if (fadeImage != null && fadeImage.canvas != null)
+         {
+        DontDestroyOnLoad(fadeImage.canvas.gameObject);
+         }
     }
     public void FadeButtonClick()
     {
@@ -22,13 +27,15 @@ public class ScreenFader : MonoBehaviour
         
     }
     
-    public IEnumerator FadeAndLoadScene(string sceneName, float fadeDuration)  
+    public IEnumerator FadeAndLoadScene(string sceneName, float fadeDuration, bool fadeOutOnNewScene = true)  
 {  
-    // Fade to black  
-    yield return StartCoroutine(FadeIn(fadeDuration));  
-    // Now load the scene  
+    yield return StartCoroutine(FadeIn(fadeDuration));   
     UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName); 
-     yield return StartCoroutine(FadeOut(fadeDuration));
+  
+    if (fadeOutOnNewScene)
+    {
+        yield return StartCoroutine(FadeOut(fadeDuration));
+    }
 }  
     
    
