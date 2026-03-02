@@ -24,7 +24,7 @@ public class Ambience : MonoBehaviour
     }
 
     ambientSource.loop = true;
-    ambientSource.playOnAwake = true;
+    ambientSource.playOnAwake = false;
   }
 
   public void PlayAmbientSound(AudioClip clip, float volume = 0.5f)
