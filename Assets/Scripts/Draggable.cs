@@ -19,6 +19,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition = eventData.position + offset;
+        ClampToBounds();
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -26,7 +27,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     }
 
-    private void ClmapToBounds()
+    private void ClampToBounds()
     {
         RectTransform canvasRect = rectTransform.parent as RectTransform;
 
