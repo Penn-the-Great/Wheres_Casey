@@ -24,6 +24,7 @@ public class Ambience : MonoBehaviour
     }
 
     ambientSource.loop = true;
+    ambientSource.playOnAwake = true;
     ambientSource.playOnAwake = false;
   }
 
