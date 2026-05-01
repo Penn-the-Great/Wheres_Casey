@@ -65,7 +65,7 @@ public class GameTimer : MonoBehaviour
         ScreenFader fader = FindObjectOfType<ScreenFader>();
         if (fader != null)
         {
-            StartCoroutine(fader.FadeAndLoadScene("GameOver", 1f));
+            StartCoroutine(fader.FadeAndLoadScene("You Died", 1f));
         }
         
         // Or disable gameplay

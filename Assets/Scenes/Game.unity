@@ -7404,6 +7404,7 @@ GameObject:
   - component: {fileID: 533105152}
   - component: {fileID: 533105154}
   - component: {fileID: 533105153}
+  - component: {fileID: 533105155}
   m_Layer: 5
   m_Name: Time
   m_TagString: Untagged
@@ -7530,6 +7531,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533105151}
   m_CullTransparentMesh: 1
+--- !u!114 &533105155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533105151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f2b51dc5754cd4b95ec49800e64450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameTimer
+  timerDisplay: {fileID: 533105153}
+  totalTimeMinutes: 1
 --- !u!1 &538362621
 GameObject:
   m_ObjectHideFlags: 0
