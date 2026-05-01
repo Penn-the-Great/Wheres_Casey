@@ -5,17 +5,25 @@ using System;
 public class GameTimer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerDisplay;
-    [SerializeField] private float totalTimeMinutes = 12f;  // Total time in minutes
+    [SerializeField] private int startHour = 18;  // 6 PM in 24-hour format
+    [SerializeField] private int startMinute = 0;
+    [SerializeField] private int endHour = 0;    // Midnight (00:00)
+    [SerializeField] private int endMinute = 0;
+    [SerializeField] private float minutesPerRealSecond = 10f;  // 10 game minutes per real second
     
-    private float timeRemaining;
+    private int currentHour;
+    private int currentMinute;
     private bool isTimerRunning = false;
+    private float timeAccumulator = 0f;
     
     // Events
     public event Action OnTimeUp;
 
     private void Start()
     {
-        timeRemaining = totalTimeMinutes * 60f;  // Convert to seconds
+        // Initialize to start time (6 PM)
+        currentHour = startHour;
+        currentMinute = startMinute;
         isTimerRunning = true;
         UpdateTimerDisplay();
     }
@@ -25,29 +33,50 @@ public class GameTimer : MonoBehaviour
         if (!isTimerRunning)
             return;
 
-        timeRemaining -= Time.deltaTime;
+        timeAccumulator += Time.deltaTime;
 
-        if (timeRemaining <= 0)
+        // Add game minutes based on real time
+        if (timeAccumulator >= 1f)
         {
-            timeRemaining = 0;
+            AddGameMinutes((int)(timeAccumulator * minutesPerRealSecond));
+            timeAccumulator = 0f;
+        }
+
+        UpdateTimerDisplay();
+
+        // Check if we've reached midnight
+        if (currentHour == endHour && currentMinute == endMinute)
+        {
             isTimerRunning = false;
             OnTimeUp?.Invoke();
             EndGame();
         }
+    }
 
-        UpdateTimerDisplay();
+    private void AddGameMinutes(int minutes)
+    {
+        currentMinute += minutes;
+
+        // Handle minute overflow
+        while (currentMinute >= 60)
+        {
+            currentMinute -= 60;
+            currentHour += 1;
+        }
+
+        // Handle hour overflow (after 23:59 comes 00:00)
+        if (currentHour >= 24)
+        {
+            currentHour = 0;
+        }
     }
 
     private void UpdateTimerDisplay()
     {
-        // Convert seconds back to minutes and seconds
-        int minutes = Mathf.FloorToInt(timeRemaining / 60f);
-        int seconds = Mathf.FloorToInt(timeRemaining % 60f);
-
-        // Format as 12:00 style (MM:SS)
+        // Format as 18:00 style (HH:MM) in 24-hour format
         if (timerDisplay != null)
         {
-            timerDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            timerDisplay.text = string.Format("{0:00}:{1:00}", currentHour, currentMinute);
         }
         else
         {
@@ -57,7 +86,7 @@ public class GameTimer : MonoBehaviour
 
     private void EndGame()
     {
-        Debug.Log("TIME'S UP! You lose!");
+        Debug.Log("TIME'S UP! You lose! It's now midnight!");
         // Add your game over logic here
         // For example: load a game over scene, show a game over panel, etc.
         
@@ -82,15 +111,28 @@ public class GameTimer : MonoBehaviour
         isTimerRunning = true;
     }
 
-    public float GetTimeRemaining()
+    public string GetCurrentTime()
     {
-        return timeRemaining;
+        return string.Format("{0:00}:{1:00}", currentHour, currentMinute);
     }
 
-    public void SetTotalTime(float minutes)
+    public void SetStartTime(int hour, int minute)
     {
-        totalTimeMinutes = minutes;
-        timeRemaining = totalTimeMinutes * 60f;
+        startHour = hour;
+        startMinute = minute;
+        currentHour = hour;
+        currentMinute = minute;
         UpdateTimerDisplay();
+    }
+
+    public void SetEndTime(int hour, int minute)
+    {
+        endHour = hour;
+        endMinute = minute;
+    }
+
+    public void SetGameMinutesPerRealSecond(float rate)
+    {
+        minutesPerRealSecond = rate;
     }
 }
