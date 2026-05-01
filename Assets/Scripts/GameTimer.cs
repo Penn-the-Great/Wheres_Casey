@@ -10,6 +10,8 @@ public class GameTimer : MonoBehaviour
     [SerializeField] private int endHour = 0;    // Midnight (00:00)
     [SerializeField] private int endMinute = 0;
     [SerializeField] private float realSecondsPerGameMinute = 0.2f;  // 2 real minutes = 10 game minutes (120s / 10 = 12s per game minute, or 0.2 game minutes per real second)
+    [SerializeField] private string gameOverSceneName = "YouDied";  // Name of your "You Died" scene
+    [SerializeField] private float fadeOutDuration = 1f;  // How long the fade takes
     
     private int currentHour;
     private int currentMinute;
@@ -90,18 +92,21 @@ public class GameTimer : MonoBehaviour
     private void EndGame()
     {
         Debug.Log("TIME'S UP! You lose! It's now midnight!");
-        // Add your game over logic here
-        // For example: load a game over scene, show a game over panel, etc.
         
-        // Example: Fade and load game over scene
+        // Pause the game first
+        Time.timeScale = 0f;
+        
+        // Get the ScreenFader and fade to the "You Died" scene
         ScreenFader fader = FindObjectOfType<ScreenFader>();
         if (fader != null)
         {
-            StartCoroutine(fader.FadeAndLoadScene("You Died", 1f));
+            StartCoroutine(fader.FadeAndLoadScene("You Died", fadeOutDuration, true));
         }
-        
-        // Or disable gameplay
-        Time.timeScale = 0f;  // Pause the game
+        else
+        {
+            Debug.LogError("ScreenFader not found in scene! Loading scene directly.");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("You Died");
+        }
     }
 
     public void PauseTimer()
