@@ -9,7 +9,7 @@ public class GameTimer : MonoBehaviour
     [SerializeField] private int startMinute = 0;
     [SerializeField] private int endHour = 0;    // Midnight (00:00)
     [SerializeField] private int endMinute = 0;
-    [SerializeField] private float minutesPerRealSecond = 10f;  // 10 game minutes per real second
+    [SerializeField] private float realSecondsPerGameMinute = 0.2f;  // 2 real minutes = 10 game minutes (120s / 10 = 12s per game minute, or 0.2 game minutes per real second)
     
     private int currentHour;
     private int currentMinute;
@@ -35,10 +35,13 @@ public class GameTimer : MonoBehaviour
 
         timeAccumulator += Time.deltaTime;
 
-        // Add game minutes based on real time
-        if (timeAccumulator >= 1f)
+        // Calculate game minutes to add based on real time
+        // If 10 game minutes = 120 real seconds, then 1 real second = 10/120 = 0.0833 game minutes
+        float gameMinutesToAdd = timeAccumulator / (60f / (10f / (realSecondsPerGameMinute * 60f)));
+
+        if (gameMinutesToAdd >= 1f)
         {
-            AddGameMinutes((int)(timeAccumulator * minutesPerRealSecond));
+            AddGameMinutes((int)gameMinutesToAdd);
             timeAccumulator = 0f;
         }
 
@@ -131,8 +134,12 @@ public class GameTimer : MonoBehaviour
         endMinute = minute;
     }
 
-    public void SetGameMinutesPerRealSecond(float rate)
+    public void SetGameSpeed(float realSecondsPerGameMinute)
     {
-        minutesPerRealSecond = rate;
+        // Adjust how fast game time passes
+        // e.g., 0.2 = 10 game minutes per 2 real minutes
+        // e.g., 0.1 = 10 game minutes per 1 real minute (faster)
+        // e.g., 0.4 = 10 game minutes per 4 real minutes (slower)
+        this.realSecondsPerGameMinute = realSecondsPerGameMinute;
     }
 }
