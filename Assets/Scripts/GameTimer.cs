@@ -17,6 +17,7 @@ public class GameTimer : MonoBehaviour
     private int currentMinute;
     private bool isTimerRunning = false;
     private float timeAccumulator = 0f;
+    private bool gameOverTriggered = false;  // Prevent multiple calls
     
     // Events
     public event Action OnTimeUp;
@@ -27,6 +28,7 @@ public class GameTimer : MonoBehaviour
         currentHour = startHour;
         currentMinute = startMinute;
         isTimerRunning = true;
+        gameOverTriggered = false;
         UpdateTimerDisplay();
     }
 
@@ -50,8 +52,9 @@ public class GameTimer : MonoBehaviour
         UpdateTimerDisplay();
 
         // Check if we've reached midnight
-        if (currentHour == endHour && currentMinute == endMinute)
+        if (currentHour == endHour && currentMinute == endMinute && !gameOverTriggered)
         {
+            gameOverTriggered = true;
             isTimerRunning = false;
             OnTimeUp?.Invoke();
             EndGame();
@@ -100,12 +103,13 @@ public class GameTimer : MonoBehaviour
         ScreenFader fader = FindObjectOfType<ScreenFader>();
         if (fader != null)
         {
-            StartCoroutine(fader.FadeAndLoadScene("You Died", fadeOutDuration, true));
+            StartCoroutine(fader.FadeAndLoadScene(gameOverSceneName, fadeOutDuration, true));
         }
         else
         {
             Debug.LogError("ScreenFader not found in scene! Loading scene directly.");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("You Died");
+            Time.timeScale = 1f;  // Reset timeScale
+            UnityEngine.SceneManagement.SceneManager.LoadScene(gameOverSceneName);
         }
     }
 
