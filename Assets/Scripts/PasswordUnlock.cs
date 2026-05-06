@@ -11,6 +11,7 @@ public class PasswordUnlock : MonoBehaviour
     [SerializeField] private Color correctColor = Color.green;
     [SerializeField] private Color incorrectColor = Color.red;
     [SerializeField] private float feedbackDuration = 2f;  // How long to show feedback
+    [SerializeField] private GameObject Barrier;
     
     private GameTimer gameTimer;
     private float feedbackTimer = 0f;
@@ -28,7 +29,7 @@ public class PasswordUnlock : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Password Input Field not assigned to PasswordUnlock!");
+        
         }
 
         if (feedbackText != null)
@@ -96,7 +97,7 @@ public class PasswordUnlock : MonoBehaviour
     {
         Debug.Log("Incorrect password! Penalty applied!");
         
-        ShowFeedback("Access Denied! +5 Minutes Penalty", incorrectColor);
+        ShowFeedback("Access Denied", incorrectColor);
         
         // Apply penalty to timer
         if (gameTimer != null)
@@ -129,11 +130,10 @@ public class PasswordUnlock : MonoBehaviour
         // - Unlock UI panel
         
         // Call an event or method in your door/lock manager
-        GameObject lockedDoor = FindObjectOfType<Canvas>()?.transform.Find("LockedDoor")?.gameObject;
-        if (lockedDoor != null)
-        {
-            lockedDoor.SetActive(false);  // Hide the locked door UI
-        }
+    
+        
+            Barrier.SetActive(false);  // Hide the locked door UI
+        
     }
 
     public void SetCorrectPassword(string newPassword)

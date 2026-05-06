@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - fadeImage
+  - Barrier
   layers:
   - Default
   - TransparentFX
