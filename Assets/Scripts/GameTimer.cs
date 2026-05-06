@@ -61,7 +61,8 @@ public class GameTimer : MonoBehaviour
         }
     }
 
-    private void AddGameMinutes(int minutes)
+    // Public method so other scripts can add penalty time
+    public void AddGameMinutes(int minutes)
     {
         currentMinute += minutes;
 
