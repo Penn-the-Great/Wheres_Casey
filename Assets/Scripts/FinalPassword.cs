@@ -12,7 +12,9 @@ public class FinalPassword : MonoBehaviour
     [SerializeField] private Color correctColor = Color.green;
     [SerializeField] private Color incorrectColor = Color.red;
     [SerializeField] private float feedbackDuration = 2f;  // How long to show feedback
-    
+     [SerializeField] private string gameOverSceneName = "YouDied";
+     [SerializeField] private float fadeOutDuration = 1f;
+
     private GameTimer gameTimer;
     private float feedbackTimer = 0f;
     private bool isUnlocked = false;
@@ -80,11 +82,10 @@ public class FinalPassword : MonoBehaviour
     {
         isUnlocked = true;
         Debug.Log("Correct password! Access granted!");
-        
-        ShowFeedback("Access Granted!", correctColor);
+    
         
         // Unlock the door or trigger whatever event you need
-        LoadByIndex();
+        OnUnlock();
         
         // Disable input after unlock
         if (passwordInput != null)
@@ -120,11 +121,23 @@ public class FinalPassword : MonoBehaviour
         }
     }
 
-       public void LoadByIndex(int = 5)
+    private void OnUnlock()
     {
-        SceneManager.LoadScene(5);
-    
-      Debug.Log("Correct password! Access granted!");
+          // Pause the game first
+        Time.timeScale = 0f;
+        
+        // Get the ScreenFader and fade to the "You Died" scene
+        ScreenFader fader = FindObjectOfType<ScreenFader>();
+        if (fader != null)
+        {
+            StartCoroutine(fader.FadeAndLoadScene(gameOverSceneName, fadeOutDuration, true));
+        }
+        else
+        {
+            Debug.LogError("ScreenFader not found in scene! Loading scene directly.");
+            Time.timeScale = 1f;  // Reset timeScale
+            UnityEngine.SceneManagement.SceneManager.LoadScene(gameOverSceneName);
+        }
         
     }
 
