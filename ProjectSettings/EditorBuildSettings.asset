@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/You died.unity
     guid: afa757e2f30d4a644b8a527ff302bc53
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: eb63c780af1c319448cefdb1c3ab807d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

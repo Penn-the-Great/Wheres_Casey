@@ -1,8 +1,9 @@
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
-public class PasswordUnlock : MonoBehaviour
+public class FinalPassword : MonoBehaviour
 {
     [SerializeField] private TMP_InputField passwordInput;
     [SerializeField] private string correctPassword = "1234";  // Set your password here
@@ -11,7 +12,6 @@ public class PasswordUnlock : MonoBehaviour
     [SerializeField] private Color correctColor = Color.green;
     [SerializeField] private Color incorrectColor = Color.red;
     [SerializeField] private float feedbackDuration = 2f;  // How long to show feedback
-    [SerializeField] private GameObject Barrier;
     
     private GameTimer gameTimer;
     private float feedbackTimer = 0f;
@@ -80,10 +80,11 @@ public class PasswordUnlock : MonoBehaviour
     {
         isUnlocked = true;
         Debug.Log("Correct password! Access granted!");
-    
+        
+        ShowFeedback("Access Granted!", correctColor);
         
         // Unlock the door or trigger whatever event you need
-        OnUnlock();
+        LoadByIndex();
         
         // Disable input after unlock
         if (passwordInput != null)
@@ -119,19 +120,11 @@ public class PasswordUnlock : MonoBehaviour
         }
     }
 
-    private void OnUnlock()
+       public void LoadByIndex(int = 5)
     {
-        // This is where you can trigger door opening, UI changes, etc.
-        // For example:
-        // - Open a door GameObject
-        // - Show a success animation
-        // - Move to next area
-        // - Unlock UI panel
-        
-        // Call an event or method in your door/lock manager
+        SceneManager.LoadScene(5);
     
-        
-            Barrier.SetActive(false);  // Hide the locked door UI
+      Debug.Log("Correct password! Access granted!");
         
     }
 
