@@ -27025,9 +27025,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'I found this coumputer in the
+  m_text: 'i found this coumputer in the
 
-    woods behind my house and I''m
+    woods behind my house and im
 
     trying
     to figure out what happened
@@ -35532,7 +35532,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1803465812}
   m_Direction: 2
   m_Value: 1.0000005
-  m_Size: 0.39119062
+  m_Size: 0.3911907
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -48268,7 +48268,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'You
 
-    Why? Will something happen?'
+    why? will something happen?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -51664,7 +51664,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'You
 
-    Not much, everything is pretty
+    not much, everything is pretty
 
     locked down'
   m_isRightToLeft: 0
@@ -52082,7 +52082,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Who is this?
+  m_text: who is this?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -54975,7 +54975,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'You
 
-    This is their friend'
+    this is their friend'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -56917,7 +56917,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'You
 
-    Do you have any ideas?'
+    do you have any ideas?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
