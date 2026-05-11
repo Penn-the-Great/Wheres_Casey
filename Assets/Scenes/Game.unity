@@ -2537,8 +2537,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1164200572}
   m_HandleRect: {fileID: 1164200571}
   m_Direction: 2
-  m_Value: 1.0000005
-  m_Size: 0.26190695
+  m_Value: 1
+  m_Size: 0.2619058
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4199,6 +4199,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!222 &123024158
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6733,6 +6734,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!222 &205879853
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11043,6 +11045,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 692270577}
+  inputField: {fileID: 370443262}
 --- !u!114 &370443262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11122,7 +11125,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 370443261}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11924,7 +11939,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1700447757}
   m_Direction: 2
   m_Value: 1.0000001
-  m_Size: 0.18090266
+  m_Size: 0.18090853
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -14253,6 +14268,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!222 &472508977
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19203,6 +19219,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 641687401}
+  inputField: {fileID: 649467141}
 --- !u!114 &649467141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19282,7 +19299,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 649467140}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -20683,6 +20712,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!114 &690070867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21523,6 +21553,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!222 &709212543
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23212,6 +23243,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!222 &782394808
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23961,7 +23993,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1618965652}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.8190907}
+  m_AnchorMin: {x: 0, y: 0.8193313}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -24889,7 +24921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -105.164635, y: 133.89983}
+  m_AnchoredPosition: {x: -105.164635, y: 133.89937}
   m_SizeDelta: {x: 186, y: 1480.3}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &835575365
@@ -25881,6 +25913,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 2008042328}
+  inputField: {fileID: 876244101}
 --- !u!114 &876244101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25960,7 +25993,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 876244100}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -27127,6 +27172,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 87125712}
+  inputField: {fileID: 925456333}
 --- !u!114 &925456333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27206,7 +27252,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 925456332}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -28431,6 +28489,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!222 &976438549
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30784,8 +30843,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 804883406}
   m_HandleRect: {fileID: 804883405}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.18090923
+  m_Value: 1.0000005
+  m_Size: 0.18066873
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -36389,6 +36448,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 1535780155}
+  inputField: {fileID: 1327185715}
 --- !u!114 &1327185715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36468,7 +36528,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1327185714}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -37077,6 +37149,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 968836709}
+  inputField: {fileID: 1333947057}
 --- !u!114 &1333947057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37156,7 +37229,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1333947056}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -42397,6 +42482,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 409559104}
+  inputField: {fileID: 1527824876}
 --- !u!114 &1527824876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42476,7 +42562,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527824875}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -43571,6 +43669,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!222 &1566588485
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44296,6 +44395,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!222 &1584499275
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44587,6 +44687,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!222 &1591354027
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45326,6 +45427,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!222 &1607515125
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45546,6 +45648,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 349133897}
+  inputField: {fileID: 1613737430}
 --- !u!114 &1613737430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45625,7 +45728,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1613737429}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -46553,6 +46668,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 1331053512}
+  inputField: {fileID: 1660220646}
 --- !u!114 &1660220646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46632,7 +46748,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1660220645}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -47106,7 +47234,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1672902552}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -47186,6 +47326,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 1429314074}
+  inputField: {fileID: 1672902549}
 --- !u!1 &1680178772
 GameObject:
   m_ObjectHideFlags: 0
@@ -47641,7 +47782,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -93, y: 140.49966}
+  m_AnchoredPosition: {x: -93, y: 140.49994}
   m_SizeDelta: {x: 186, y: 1072.9}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1696353751
@@ -48025,7 +48166,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1182688113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.81909734}
+  m_AnchorMin: {x: 0, y: 0.81909144}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -48400,6 +48541,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 770207968}
+  inputField: {fileID: 1708359710}
 --- !u!114 &1708359710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48479,7 +48621,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1708359709}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -55847,6 +56001,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!222 &1991982696
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56131,6 +56286,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 2
   Barrier: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!222 &1997296496
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -57870,6 +58026,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 1266798530}
+  inputField: {fileID: 2035528994}
 --- !u!114 &2035528994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57949,7 +58106,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2035528993}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -59473,6 +59642,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackDuration: 4
   Barrier: {fileID: 835919829}
+  inputField: {fileID: 2109011581}
 --- !u!114 &2109011581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59552,7 +59722,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2109011580}
+        m_TargetAssemblyTypeName: PasswordUnlock, Assembly-CSharp
+        m_MethodName: ToUppercase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []

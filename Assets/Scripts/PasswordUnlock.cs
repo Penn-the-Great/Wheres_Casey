@@ -12,6 +12,8 @@ public class PasswordUnlock : MonoBehaviour
     [SerializeField] private Color incorrectColor = Color.red;
     [SerializeField] private float feedbackDuration = 2f;  // How long to show feedback
     [SerializeField] private GameObject Barrier;
+    [SerializeField] private TMP_InputField inputField;
+  
     
     private GameTimer gameTimer;
     private float feedbackTimer = 0f;
@@ -36,7 +38,14 @@ public class PasswordUnlock : MonoBehaviour
         {
             feedbackText.text = "";
         }
+
+
     }
+
+            public void ToUppercase(string input)
+{
+    inputField.text = input.ToUpper();
+}
 
     private void Update()
     {
@@ -53,6 +62,8 @@ public class PasswordUnlock : MonoBehaviour
             }
         }
     }
+   
+
 
     private void OnPasswordSubmitted(string password)
     {
