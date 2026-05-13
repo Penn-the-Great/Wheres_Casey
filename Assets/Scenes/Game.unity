@@ -2537,8 +2537,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1164200572}
   m_HandleRect: {fileID: 1164200571}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.2619058
+  m_Value: 1.0000011
+  m_Size: 0.26190695
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -20286,25 +20286,19 @@ MonoBehaviour:
     the weekends. The weirdness of being away from the place I spent the majority
     of my life in just refuses to lessen at all. That's not even mentioning missing
     my friends from back home. We've been talking for a while online, but it's just
-    not the same, you know?\n\n\nEthan still isn't responding. There has been absolutely
-    nothing from him for months now. Why has no one else noticed? I can't even get
-    in contact with his parents. Every time I try, it just goes to voicemail, and
-    they haven't called me back since before school started. Every time I try to
-    ask our friends about it, they either brush me off or act like they didn't hear
-    me. They're acting like he doesn't exist and I just want to know what's going
-    on for once.\n\n\nI haveN't been able to go outside much lately and I miss it
-    :[\n\n\nSome fresh air would do me Good, as wound up as I've been the past little
-    while, but I just don't have the time T^T\n\n\nI think things are finally calMing
-    down a bit, so maybe I could see if the others wanted to go for a picnic or something
-    soon? All three of us could definitely use a break.\n\n\nAnyways, its like\u2026
-    2 am right now and I'm still not tired so I should probably turn this off, \"reduce
-    my blue light before sleeping\" or whAtever.\n\n\nCasey Wakefield, signing Off
-    :}\n\n\n\n\n\nIt happened again. Checked this entry after I wOke up, and I swear
-    something is gone. There's gaps in sentences Where I wouldn't put them, there's
-    an entire paragraph gone again that I swear I wrote\u2026 What did I write exactly?
-    This is just so weird :/ I can't find anyThing online that describes anything
-    like this, but I don't have the time to do anything about it. This is so frustrating,
-    I hate not knowing wHat's going on like this.\n\n"
+    not the same, you know?\n\n\nI haveN't been able to go outside much lately and
+    I miss it :[\n\n\nSome fresh air would do me Good, as wound up as I've been the
+    past little while, but I just don't have the time T^T\n\n\nI think things are
+    finally calMing down a bit, so maybe I could see if the others wanted to go for
+    a picnic or something soon? All three of us could definitely use a break.\n\n\nAnyways,
+    its like\u2026 2 am right now and I'm still not tired so I should probably turn
+    this off, \"reduce my blue light before sleeping\" or whAtever.\n\n\nCasey Wakefield,
+    signing Off :}\n\n\n\n\n\nIt happened again. Checked this entry after I wOke
+    up, and I swear something is gone. There's gaps in sentences Where I wouldn't
+    put them, there's an entire paragraph gone again that I swear I wrote\u2026 What
+    did I write exactly? This is just so weird :/ I can't find anyThing online that
+    describes anything like this, but I don't have the time to do anything about
+    it. This is so frustrating, I hate not knowing wHat's going on like this.\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -38682,12 +38676,7 @@ MonoBehaviour:
     them whenever possible, but it's just a bit rough :[\n\n\nI do think I am going
     to get along with the people in my classes, just based off the way they've been
     acting so far, but 16t's still a bit too early to see so far. I'm hoping to make
-    some friends, especially so that I can have someone to work with on group projects.\n\n\nSpeaking
-    of friends, I think something might be wrong with Ethan. He hasn't been responding
-    to any of my messages in weeks, which is completely unlike him, but no one else
-    seems to even notice. Also, I heard from one of our mutual friends that he was
-    apparently supposed to room in the same building as Regan and I, but there's
-    been no word for a while. Maybe I should see if his sister knows anything.\n\n\nI
+    some friends, especially so that I can have someone to work with on group projects.\n\n\nI
     would write more, but 15 have homework to focus on for now\u2026\n\n\nI'21 definitely
     try to write some more when I get the time, wouldn't want to make things harder
     on a future historian would we ;}\n\n(Regan is looking over my shoulder as I
@@ -47782,7 +47771,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -93, y: 140.49994}
+  m_AnchoredPosition: {x: -93, y: 140.49919}
   m_SizeDelta: {x: 186, y: 1072.9}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1696353751
